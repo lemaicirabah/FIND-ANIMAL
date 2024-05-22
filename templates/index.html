@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!--
+    Full Motion by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="fr">
+<head>
+    <title>FINDANIMAL</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/jquery.poptrox.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/skel.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body id="top">
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>FIND ANIMAL</h1>
+                <p>Explorez l'amour sans limite sur notre appli d'adoption gratuite.<br>
+                Trouvez votre compagnon idéal en quelques clics avec notre barre de recherche.</p>
+            </header>
+            <div class="searchBox">
+                <form method="get"  name="search" action="/resultatRecherche" class="recherche">       
+                    <input class="searchInput" name="query" class="recherche" placeholder="Search">
+                    <button class="button style4 fit" >Search</button>
+                </form>
+                <form id="adoption" method="get"  name="adoption" action="/form">       
+                    <h2>mettre un animal en adoption</h2>
+                    <button class="btn btn-outline-success">Adoption >></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="main">
+        <div class="inner">
+            <div class="thumbnails">
+                {% for animal in liste_animaux %}
+                <div class="box">
+                        <img src="/images/{{animal.espece}}.png" class="image fit" alt="ANIMAL N'A PAS DE PHOTO" width="600" height="338">
+                    <div class="inner">
+                        <h3>{{ animal.nom }}</h3>
+                        <p> {{ animal.age }} ans - {{ animal.espece }}</p>
+                        <form method="get"  name="search" action="/Animal/{{animal.id}}" class="recherche"> 
+                            <button class="button fit" >Description</button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="inner">
+            <h2>L'Univers de l'Adoption Responsable.</h2>
+            <p>Bienvenue sur Find Animal, votre portail dédié à la recherche de nouveaux compagnons à quatre pattes prêts à être adoptés et à apporter de la joie à votre foyer. Notre mission est de faciliter la rencontre entre des animaux adorables cherchant un foyer aimant et des personnes désireuses d'ajouter une nouvelle boule de poils à leur vie. Parcourez notre vaste sélection d'animaux de compagnie, des chiens et chats aux petits animaux exotiques, et découvrez des profils détaillés qui vous aideront à trouver votre match parfait. Chaque adoption réalisée sur Find Animal est une histoire de bonheur partagé, où les vies humaines et animales se croisent pour créer des liens durables. Préparez-vous à vivre une aventure pleine d'amour et de fidélité en adoptant votre prochain compagnon chez Find Animal. Parce que chaque animal mérite un foyer chaleureux, et chaque foyer mérite un compagnon fidèle.</p>
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">
+        Contenu basé sur "Full Motion" par <a href="https://templated.co/license"> Templated</a>.
+    </div>
+</body>
+</html>

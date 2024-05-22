@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="utf-8">
+    <meta content="device-width, initial-scale=1.0" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Accueil</title>
+    <link href="/css/Style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="animal">
+        <a href="/" class="bouton-retour"> << Accueil </a>
+        <br>
+        <div class="table">
+            <p>Voici la description de l'animal :</p>
+        </div>
+        <br>
+        <table class="table-striped">
+            <tr>
+                <th>Nom</th>
+                <td>{{ animal.nom }}</td>
+            </tr>
+            <tr>
+                <th>Espèce</th>
+                <td>{{ animal.espece }}</td>
+            </tr>
+            <tr>
+                <th>Race</th>
+                <td>{{ animal.race }}</td>
+            </tr>
+            <tr>
+                <th>Âge</th>
+                <td>{{ animal.age }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ animal.description }}</td>
+            </tr>
+            <tr>
+                <th>Courriel du propriétaire</th>
+                <td><a href="mailto:{{ animal.courriel }}">{{ animal.courriel }}</a></td>
+            </tr>
+        </table>
+        <br>
+    </div>
+</body>
+</html>

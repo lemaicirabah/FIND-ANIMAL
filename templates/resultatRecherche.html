@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+   <head>
+      <meta charset="utf-8">
+      <meta content="device-width, initial-scale=1.0" name="viewport">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <title>
+         Resultat..
+      </title>
+      <link href="/css/Style.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+	        <div class="resultat">
+	        	<a href="/" class="bouton-retour"> << Acueil </a>
+		        <br>
+		        <div class="table">
+		        <p >Voici le résultat de votre recherche</p>
+		        </div>
+		        {% if animaux | length != 0 %}
+				{% for animal in animaux %}
+			    <br> <br>
+		  					<table class= " table-striped">
+								<tr>
+									<th>Nom</th>
+							  		<td>{{ animal.nom }}</td>
+								</tr>
+								<tr>
+							  		<th>Description</th>
+							  		<td>{{ animal.description }}</td>
+								</tr>
+								<tr>
+							  		<th>Page de l'animal</th>
+							  		<td>
+							  			<form method="get"  name="search" action="/Animal/animal.id" class="recherche"> 
+							  				<a href="/Animal/{{ animal.id }}" class="btn btn-outline-success" role="button">
+							  					Plus de details..
+                                        </form>
+							  			</td>
+								</tr>
+							</table>
+							<br>
+					    {% endfor %}
+					{% else %}
+					  <h2>Aucune résultat...</h2>
+					{% endif %}
+			</div>
+		</body>
+</html>

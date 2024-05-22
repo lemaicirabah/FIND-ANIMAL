@@ -1,0 +1,102 @@
+    <!DOCTYPE html>
+    <html lang="fr-CA">
+    <head>
+        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulaire..</title>
+        <link rel="stylesheet" type="text/css" href="/css/form.css">
+        <script src="/js/form.js"></script>
+    </head>
+    <body>
+        <div class="master">
+            <div class="main">
+                <a href="/" class="bouton-retour"> << Accueil </a>
+                <h2> Mettre un animal en adoption en remplissant le formulaire :</h2>
+                <h1>Formulaire d'inscription</h1>
+                <div class="formulaire">
+                    <form name="formulaireAdoption" action="/valideForm" onsubmit="return validerFormulaire()" method="post">
+                        <br>
+                        <label for="nomAnimal">*Nom de l'animal</label>
+                        <br>
+                        <input type="text" id="nomAnimal" name="nomAnimal" placeholder="ex: Rex">
+                        <p id="nomAnimalErreur"></p>
+                        <br>
+                        <label for="especeAnimal">*Espèce de l'animal</label>
+                        <br>
+                        <input type="text" id="especeAnimal" name="especeAnimal" placeholder="ex: Chien" >
+                        <p id="especeAnimalErreur"></p>
+                        <br>
+                        <label for="raceAnimal">*Race de l'animal</label>
+                        <br>
+                        <input type="text" id="raceAnimal" name="raceAnimal" placeholder="ex: pitbul">
+                        <p id="raceAnimalErreur"></p>
+                        <br>
+                        <label for="ageAnimal">*Âge de l'animal</label>
+                        <br>
+            <select name="ageAnimal" id="ageAnimal">
+                        <option value="0"> moins de 1 an</option>
+                        <option value="1">1 an</option>
+                        <option value="2">2 ans</option>
+                        <option value="3">3 ans</option>
+                        <option value="4">4 ans</option>
+                        <option value="5">5 ans</option>
+                        <option value="6">6 ans</option>
+                        <option value="7">7 ans</option>
+                        <option value="8">8 ans</option>
+                        <option value="9">9 ans</option>
+                        <option value="10">10 ans</option>
+                        <option value="11">11 ans</option>
+                        <option value="12">12 ans</option>
+                        <option value="13">13 ans</option>
+                        <option value="14">14 ans</option>
+                        <option value="15">15 ans</option>
+                        <option value="16">16 ans</option>
+                        <option value="17">17 ans</option>
+                        <option value="18">18 ans</option>
+                        <option value="19">19 ans</option>
+                        <option value="20">20 ans</option>
+                        <option value="21">21 ans</option>
+                        <option value="22">22 ans</option>
+                        <option value="23">23 ans</option>
+                        <option value="24">24 ans</option>
+                        <option value="25">25 ans</option>
+                        <option value="26">26 ans</option>
+                        <option value="27">27 ans</option>
+                        <option value="28">28 ans</option>
+                        <option value="29">29 ans</option>
+                        <option value="30">30 ans</option>
+                        </select>
+                            <p id="ageAnimalErreur"></p>
+                            <br>
+                            <label for="descriptionAnimal">*Description de l'animal</label>
+                            <br>
+                            <input type="text" id="descriptionAnimal" name="descriptionAnimal" placeholder="ex: Petit chien docile.">
+                            <p id="descriptionAnimalErreur"></p>
+                            <br>
+                            <label for="emailContact">*Adresse courriel</label>
+                            <br>
+                            <input type="text" id="emailContact" name="emailContact" placeholder="ex: rabah.lemaici@uqam.com">
+                            <p id="emailContactErreur"></p>
+                            <br>
+                            <label for="adresseContact">*Adresse de récupération</label>
+                            <br>
+                            <input type="text" id="adresseContact" name="adresseContact" placeholder="ex: 123 ch Principal">
+                            <p id="adresseContactErreur"></p>
+                            <br>
+                            <label for="villeContact">*Ville</label>
+                            <br>
+                            <input type="text" id="villeContact" name="villeContact" placeholder="ex: Montréal">
+                            <p id="villeContactErreur"></p>
+                            <br>
+                            <label for="codePostalContact">*Code Postal</label>
+                            <br>
+                            <input type="text" id="codePostalContact" name="codePostalContact" placeholder="ex: H2C 3G6">
+                            <p id="codePostalContactErreur"></p>
+                            <input type="submit" id="submit" value="Soumettre" onclick="return soumettreFormulaire()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
