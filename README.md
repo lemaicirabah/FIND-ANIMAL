@@ -1,9 +1,11 @@
-# inf3190-tp3-20233
+# FIND ANIMAL
+## Presentation 
+
+Find Animal est une plateforme de recherche et d'adoption d'animaux de compagnie dédiée à faciliter la rencontre entre des animaux adorables cherchant un foyer aimant et des personnes désireuses d'ajouter une nouvelle boule de poils à leur vie. Notre mission est de rendre le processus d'adoption aussi simple et agréable que possible, en offrant une expérience utilisateur fluide et intuitive.
 
 ## Identification
 
 - Nom : Lemaici Rabah
-- Code permanent : LEMR12129603
 
 ## Exécution
 
